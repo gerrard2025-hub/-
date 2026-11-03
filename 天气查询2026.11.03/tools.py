@@ -43,12 +43,12 @@ def get_weather(city:str):
     location = get_city_location(city)
     
     #第二步：通过城市location经纬度，查询天气情况
-    #  控制台的API Key 和你的专属Host 
+    #  配置访问api
     QW_API_KEY = my_api_key
     HOST = my_host
     LOCATION = location
-    # 
-
+    
+    #网站访问查询
     url = f"https://{HOST}/v7/weather/3d"
     headers = {"X-QW-Api-Key": QW_API_KEY}
     params = {"location": LOCATION}
